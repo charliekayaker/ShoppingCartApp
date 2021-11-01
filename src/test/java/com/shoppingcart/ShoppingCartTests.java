@@ -1,4 +1,6 @@
-package com.shoppingcart.ShoppingCart;
+package com.shoppingcart;
+
+import com.shoppingcart.entities.ShoppingCart;
 
 import org.junit.Assert;
 import org.junit.Test;
