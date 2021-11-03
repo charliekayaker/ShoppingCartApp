@@ -14,16 +14,12 @@ public interface ShoppingCartService {
 
     public void deleteProduct(Product product);
 
-    public void modifyProduct(Product product);
-
     public Optional<List<Product>> getAllProductsFromCart(Integer cartId);
 
-    public void addProductToCart(Product product);
+    public void addProductToCart(Integer cartId, Product product) throws Exception;
 
-    public void deletedProductInCart(Product product);
-
-    public void modifyProductInCart(Product product);
-
+    public void deletedProductInCart(Integer cartId, Product product) throws Exception;
+    
     public PreVenta checkout(Integer cartId);
     
 }
