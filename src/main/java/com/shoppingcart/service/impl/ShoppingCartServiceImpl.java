@@ -35,10 +35,9 @@ public class ShoppingCartServiceImpl implements ShoppingCartService{
     }
 
     @Override
-    public void deleteProduct(Product product) {
+    public void deleteProduct(String sku) {
        
-        productsRepository.delete(product);
-        
+        productsRepository.deleteById(sku);        
     }
 
     @Override

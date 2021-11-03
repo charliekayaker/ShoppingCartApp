@@ -1,19 +1,17 @@
 package com.shoppingcart.enums;
 
-public enum STATUS {
+public enum Status {
 
     PENDING("Pending"), COMPLETED("Completed");
 
     String ref;
 
-    STATUS(String s){
+    Status(String s){
         this.ref = s;
     }
 
     public String getRef(){
         return ref;
     }
-
-
     
 }

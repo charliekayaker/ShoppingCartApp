@@ -12,7 +12,7 @@ public interface ShoppingCartService {
 
     public void addProduct(Product product);
 
-    public void deleteProduct(Product product);
+    public void deleteProduct(String sku);
 
     public Optional<List<Product>> getAllProductsFromCart(Integer cartId);
 
