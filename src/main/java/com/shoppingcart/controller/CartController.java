@@ -2,6 +2,7 @@ package com.shoppingcart.controller;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 import javax.servlet.http.HttpServletRequest;
 
@@ -66,6 +67,17 @@ public class CartController{
             throw new BadHttpRequest();
         }
         
+	}
+
+    @GetMapping("/getProductsFromCart/{id}")
+    public ResponseEntity<List<Product>> getProductsFromCart(HttpServletRequest request,  @PathVariable String id) throws Exception {
+        Optional<List<Product>> products = service.getAllProductsFromCart(Integer.parseInt(id));
+        
+        if(products.isPresent())
+            return ResponseEntity.ok(products.get());
+        else
+            throw new Exception();    
+
 	}
 
 
